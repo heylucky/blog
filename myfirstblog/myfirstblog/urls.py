@@ -15,13 +15,14 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
-from myfirstblog.views import linyuelin,hello,my_homepage_view
+from myfirstblog.views import linyuelin,hello,my_homepage_view,current_datetime
+from blog.views import shanhtml
 
 
 urlpatterns = [
     url(r'^linyuelin/', linyuelin),
     url(r'^homepage/', my_homepage_view),
-   # url(r'^mingshan$/', my_homepage_view),
+    url(r'^shanhtml/', shanhtml),
     url(r'^admin/', admin.site.urls),
 
 ]
